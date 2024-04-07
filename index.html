@@ -32,7 +32,8 @@
     // 👉 CHALLENGE 3
     function booleanize(obj) {
       for (var key in obj) {
-        if (key.length > 9) {
+
+      if (key.length > 9) {
           return "shorten all prop names to 9 chars or less";
 
         } else if (obj[key] === 0) {
@@ -43,7 +44,6 @@
 
         } else if (obj[key] === null) {
           delete obj[key];
-          
         } 
       }
       return obj;
@@ -51,8 +51,10 @@
 
     // 👉 CHALLENGE 4
     function scrub(text, forbidden) {
-      const str = [""];
+      
+      const forbiddenWords = ["of", "silent", "the", "high", "aces", "hearts"]
       const scrubbedText = text.replace("x");
+      
       return scrubbedText;
       }
 
