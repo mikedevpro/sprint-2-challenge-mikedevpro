@@ -24,7 +24,7 @@
 
     // 👉 CHALLENGE 2
     function mineSweeper(grid, x, y) {
-      
+
       return "invalid coordinates"
     }
     
@@ -52,10 +52,21 @@
 
     // 👉 CHALLENGE 4
     function scrub(text, forbidden) {
+      let arr = text.split(" ")
       
-      const scrubbedText = text.replace("x");
-      
-      return scrubbedText;
+      for (let index = 0; index < arr.length; index++) {
+        for (let j = 0; j < forbidden.length; j++) {
+          if (arr[index] == forbidden[j]) {
+            let str = ""
+            for (let k = 0; k < arr[index].length; k++) {
+              str += 'x'
+            }
+            arr[index] = str
+          }
+        
+        }
+      }
+        return arr.join(" ")
       }
 
     // 👉 CHALLENGE 5 (bonus, NOT graded)
