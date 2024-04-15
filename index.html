@@ -24,8 +24,18 @@
 
     // 👉 CHALLENGE 2
     function mineSweeper(grid, x, y) {
+      if (x < 1 || x > 3 || y < 1 || y > 3) {
+        return "invalid coordinates";
+      } 
 
-      return "invalid coordinates"
+      let adjustedX = x - 1;
+      let adjustedY = y - 1;
+      let gridElement = grid[adjustedY][adjustedX];
+      if (gridElement === "🟥") {
+        return "🟥 💀";
+      } else if (gridElement === "🟦"){
+        return "🟦 🥳";
+      }
     }
     
     
@@ -50,7 +60,7 @@
       return obj;
     }
 
-    // 👉 CHALLENGE 4
+    // 👉 CHALLENGE 4 
     function scrub(text, forbidden) {
       let arr = text.split(" ")
       
